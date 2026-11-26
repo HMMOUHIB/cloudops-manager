@@ -9,6 +9,7 @@ async function bootstrap() {
   const port = Number(config.get('API_PORT', 4000));
   const frontendURL = config.getOrThrow<string>('FRONTEND_URL');
   app.setGlobalPrefix('api');
+    app.enableCors({ origin: frontendURL });
   await app.listen(port);
   Logger.log(`API running on http://localhost:${port}/api`, 'Bootstrap');
 }
