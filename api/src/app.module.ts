@@ -20,7 +20,7 @@ import { AppService } from './app.service';
         password: config.getOrThrow<string>('POSTGRES_PASSWORD'),
         database: config.getOrThrow<string>('POSTGRES_DB'),
         autoLoadEntities: true,
-        synchronize: true, 
+        synchronize: true,
       }),
     }),
   ],
